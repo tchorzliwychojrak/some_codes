@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+body {
+    background-color: chocolate;
+    font-family: monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.newspaper-layout {
+  display:grid;
+  grid-template-areas: 
+  "title title title"
+  "row-line-1 row-line-1 row-line-1"
+  "feature-article cover-image secondary-article"
+  "feature-article cover-image secondary-article"
+  "row-line-2 row-line-2 row-line-2"
+  "small-article1 small-article2 small-article3"
+  "small-article4 small-article5 small-article6"
+  "row-line-3 row-line-3 row-line-3";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 5px 15px;
+
+}
+
+.title {
+  grid-area: title;
+}
+
+.title, .h2 {
+  font-size: 3.3rem;
+  margin: 15px 0;
+}
+.feature-article {
+  grid-area: feature-article;
+  font-size: 2.5rem;
+  
+}
+
+.secondary-article {
+  grid-area: secondary-article;
+}
+
+.cover-image {
+  grid-area: cover-image;
+  background-color: chocolate;
+}
+
+.small-article1 {
+  grid-area: small-article1;
+}
+
+.small-article2 {
+  grid-area: small-article2;
+}
+.small-article3 {
+  grid-area: small-article3;
+}
+.small-article4 {
+  grid-area: small-article4;
+}
+.small-article5 {
+  grid-area: small-article5;
+}
+.small-article6 {
+  grid-area: small-article6;
+}
+
+.cover-image img {
+  max-width: 100%;
+}
+
+article {
+    max-width: 300px;
+    text-align: justify;
+    font-size: 2.1rem;
+    margin: 15px 30px;
+}
+
+h2 {
+     text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.row-line-1 {
+    grid-area: row-line-1;
+    width: 100%;
+}
+.row-line-2 {
+    grid-area: row-line-2;
+    width: 100%;
+}
+.row-line-3 {
+    grid-area: row-line-3;
+    width: 100%;
+}
+
+figcaption {
+    font-size: 1.7rem;
+}
